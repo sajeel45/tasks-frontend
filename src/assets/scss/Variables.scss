@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+$inter: "Inter", sans-serif;
+$plus_jakarta_sans: "Plus Jakarta Sans", sans-serif;
+$space_grotesk: "Poppins", sans-serif;
+
+$screen-xs: 767px;
+
+$body_bg_color :  #F7F9FF;
+
+$dark_bg : rgb(18, 28, 48);
+
+$primary : #6A4E77;
+
+$black: #000000;
+$white: #ffffff;
+$light_white : rgb(128, 133, 143);
+
+$heading_primary : rgb(24, 28, 35) ;
+$text_primary : rgba(90, 97, 110, 1);
+
+$text_primary_1 : #262c37;
+$text_primary_2 : #5E6473;
+$text_dark :  rgb(18, 28, 48);
+$gray_text : #80858f;
+
+$light_green: #6de1a180;
+$text-green: #41ce8e;
+$text-green_1: #209476;
+$green : #6de1a1;
+
+$purple : #6A4E77;
+
+$pink : #FB39AE;  
+$red : #D93E39;
+
+$dark-blue: #121c30;
+$border-color: #cfd1d5;
+$border_color_light : #00000014;
+$light_hover_bg :#ebeced;
+$light_purple_bg : #F4F4F6;
+
+$transition : .3s ease-in-out all;
+
+$pink_img_filter : brightness(0) saturate(100%) invert(49%) sepia(55%) saturate(7121%) hue-rotate(302deg) brightness(101%) contrast(97%);
+$blue_img_filter : brightness(0) saturate(100%) invert(50%) sepia(22%) saturate(3368%) hue-rotate(202deg) brightness(100%) contrast(98%);
+$gray_img_filter : brightness(0) saturate(100%) invert(40%) sepia(10%) saturate(1016%) hue-rotate(180deg) brightness(97%) contrast(94%);
+$white_img_filter : brightness(0) saturate(100%) invert(99%) sepia(6%) saturate(577%) hue-rotate(264deg) brightness(111%) contrast(100%) !important;
+$yellow_img_filter: brightness(0) saturate(100%) invert(63%) sepia(98%) saturate(359%) hue-rotate(358deg) brightness(89%) contrast(92%);

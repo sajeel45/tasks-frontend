@@ -1,0 +1,961 @@
+@use "Variables";
+
+
+body {
+  font-family: Variables.$space_grotesk;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  background: Variables.$body_bg_color;
+  margin: 0 0 0;
+&:has(.tooltip.show){
+  overflow: hidden;
+}
+}
+
+.container {
+  max-width: 1224px !important;
+  &.small{
+    max-width: 1100px !important;
+  }
+  &.large{
+    max-width: 1366px !important;
+  }
+  &.ex-large{
+    max-width: 1920px !important;
+  }
+}
+
+.spacing-class {
+  padding-block: 56px;
+  &.medium{
+    padding-block: 96px;
+  }
+  &.large{
+    padding-block: 144px;
+  }
+}
+  
+  //------------------ Fonts ---------------------//
+ 
+  h1 {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 110%;
+    color: Variables.$dark-blue;
+    font-family: Variables.$space_grotesk;
+    &.white{
+      color: Variables.$white;
+    }
+    span{
+      font-weight: 800;
+      font-size: 60px;
+      line-height: 110%;
+      color: Variables.$text-green;
+    &.white{
+      color: Variables.$white;
+    }
+    }
+  }
+  
+  h2, .h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    color: Variables.$heading_primary;
+    font-family: Variables.$space_grotesk;
+    @media screen and (max-width: 1199px) and (min-width: 992px){
+      font-size: 40px;
+      line-height: 50px;
+    }
+    @media screen and (max-width: 991px) and (min-width: 768px) {
+      font-size: 32px;  
+      line-height: 40px;               
+    }
+    @media screen and (max-width: Variables.$screen-xs) {
+      font-size: 26px;
+      line-height: 32px;
+    }
+    &.white{
+      color: Variables.$white;
+    }
+    &.large{
+      font-size: 48px;
+      line-height: 60px;
+    }
+    span{
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 120%;
+      color: Variables.$heading_primary;
+      font-family: Variables.$space_grotesk;
+      @media screen and (max-width: 1199px) and (min-width: 992px){
+        font-size: 40px;
+        line-height: 50px;
+      }
+      @media screen and (max-width: 991px) and (min-width: 768px) {
+        font-size: 32px;  
+        line-height: 40px;               
+      }
+      @media screen and (max-width: Variables.$screen-xs) {
+        font-size: 26px;
+        line-height: 32px;
+      }
+    }
+  }
+  
+  h3, .h3 {
+    font-family: Variables.$space_grotesk;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: Variables.$heading_primary ;
+    @media screen and (max-width: Variables.$screen-xs) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+    &.h3{
+      font-size: 30px;
+      line-height: 42px;
+      span{
+        font-size: 30px;
+        line-height: 42px;
+      }
+    }
+    span{
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+      color: Variables.$heading_primary;
+      font-family: Variables.$space_grotesk;
+    }
+    &.white{
+      color: Variables.$white;
+      a{
+      color: Variables.$white;
+      }
+  }
+  }
+  
+  h4{
+    font-family: Variables.$space_grotesk;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    color: Variables.$heading_primary;
+    margin: 0 0 0 0;
+    &.white{
+      color: Variables.$white;
+      a{
+      color: Variables.$white;
+      }
+  }
+  }
+
+  h5{
+    font-family: Variables.$space_grotesk;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: Variables.$heading_primary;
+    &.white{
+      color: Variables.$white;
+      a{
+      color: Variables.$white;
+      }
+  }
+  &.light-clr {
+    color: Variables.$text_primary;
+  }
+  }
+
+  h6{
+    font-family: Variables.$space_grotesk;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: Variables.$heading_primary;
+    &.white{
+      color: Variables.$white;
+      a{
+      color: Variables.$white;
+      }
+  }
+  &.green{
+    color: Variables.$text-green_1;
+  }
+  }
+  
+  p, .p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    font-family: Variables.$space_grotesk;
+    color: Variables.$text_primary;
+    @media screen and (max-width: 767px){
+      font-size: 14px;
+      line-height: 22px;
+      br{
+        display: none;
+      }
+    }
+    &.medium{
+      font-size: 16px;
+      line-height: 24px;
+      @media screen and (max-width: Variables.$screen-xs) {
+        font-size: 14px;
+        line-height: 22px;
+      }
+      a{
+        font-size: 16px;
+        line-height: 24px;
+        @media screen and (max-width: Variables.$screen-xs) {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+    &.large{
+      font-size: 18px;
+      line-height: 26px;
+    }
+    &.medium-bold{
+      font-weight: 500;
+      a{
+      font-weight: 500;
+      }
+    }
+    &.small{
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &.dark{
+      color: Variables.$heading_primary;
+      a{
+      color: Variables.$heading_primary;
+      }
+    }
+    &.white{
+      color: Variables.$white;
+      a{
+      color: Variables.$white;
+      }
+  }
+  &.green{
+    color: Variables.$text-green_1;
+  }
+  }
+  span {
+    font-family: Variables.$space_grotesk;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: Variables.$text_primary;
+    display: inline-block;
+    &.white{
+      color: Variables.$white;
+    }
+    &.green{
+      color: Variables.$text-green_1;
+    }
+    &.light-green{
+      color: Variables.$text-green;
+    }
+  }
+  
+  a, .a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: Variables.$text_primary;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+    &.underline{
+      text-decoration: underline;
+    }
+    &.green{
+      color: Variables.$text-green_1;
+    }
+    &.text_green{
+      color: Variables.$text-green;
+    }
+  }
+  button{
+    &.trasparent-btn{
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      outline: none;
+      background: transparent;
+    }
+    &.custom-btn{
+      background: transparent;
+      border: none;
+      padding: 0;
+      font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: Variables.$text_primary;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    &:hover {
+      // color: $white;
+      text-decoration: none;
+    }
+    }
+  }
+  
+  strong {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    font-family: Variables.$space_grotesk;
+    color:Variables.$text_primary;
+    a{
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 700;
+    }
+    &.medium{
+      font-size: 16px;
+      line-height: 24px;
+      a{
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    &.small{
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &.black{
+      color: Variables.$black;
+    }
+    &.large{
+      font-size: 20px;
+      line-height: 26px;
+    }  &.white{
+      color: Variables.$white;
+    }
+    &.white{
+      color: Variables.$white;
+      a{
+      color: Variables.$white;
+      }
+    }
+  }
+  
+  ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    li {
+      list-style: none;
+      display: inline-block;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: Variables.$black;
+    }
+  }
+  
+  //------------------ font-weights ---------------------//
+  .bold {
+    font-weight: 700;
+  }
+  
+  .semibold {
+    font-weight: 600;
+  }
+  
+  .medium_weight {
+    font-weight: 500;
+  }
+  
+  .regular {
+    font-weight: 400;
+  }
+  
+
+  @mixin ellipsis_2{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    cursor: pointer;
+  }
+  
+  @mixin ellipsis_1{
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+  }
+
+  .one-line-ellipses{
+    @include ellipsis_1;
+  }
+
+   //------------------ btns ---------------------//
+
+   .btn-style{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: auto;
+    //height: 50px;
+    padding: 7px 20px 9px;
+    color: Variables.$white;
+    cursor: pointer;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: Variables.$space_grotesk;
+    font-weight:500;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: Variables.$primary;
+    border: 1px solid Variables.$primary;
+    transition: all .3s ease-in-out;
+    z-index: 2;
+    img, svg{
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      transition: all .3s ease-in-out;
+      &.no-filter{
+        filter: none !important;
+      }
+    }
+    &.fuck-designers{
+              &:hover{
+                background: #cc96e5 !important;
+              }
+            }
+    &:hover{
+      transition: all .3s ease-in-out;
+      color: Variables.$primary;
+      border: 1px solid Variables.$primary;
+      background: transparent!important;
+      img, svg{
+        filter: Variables.$dark_bg;
+      }
+    }
+    &.full{
+      width: 100%;
+    }
+    &.large{
+      font-size: 16px;
+      line-height: 24px;
+      padding: 13px 20px;
+      @media screen and (max-width: 991px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      img, svg{
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        @media screen and (max-width: Variables.$screen-xs) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    &.large_font{
+      font-size: 16px;
+      line-height: 22px;
+      @media screen and (max-width: 991px) and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      @media screen and (max-width: Variables.$screen-xs) {
+        font-size: 12px;
+        line-height: 16px;
+        text-wrap: nowrap;
+      }
+    }
+    &.transparent{
+      background: transparent !important;
+      border-color: Variables.$primary !important;
+      color: Variables.$primary !important;
+      &:hover{
+        color: Variables.$primary !important;
+        background: Variables.$light_hover_bg !important;
+      }
+    }
+    &.colored-border{
+      color: Variables.$white;
+      text-transform: capitalize;
+      border-radius: 60px;
+      background: 0 0;
+      //border-image-slice: 1!important;
+      //border-image: linear-gradient(135deg,#0088CC 0%,#e36159 80%);
+      background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, rgb(255 1 2), rgb(243 182 0 / 50%)) border-box;
+      border: 2px solid transparent;
+    }
+    &.gradient{
+      background: rgb(219,10,10);
+      background: linear-gradient(0deg, rgba(219,10,10,1) 0%, rgba(253,219,45,1) 100%);
+      border: none;
+      color: white;
+    }
+    &.yellow-transparent{
+      color: #DBA32A !important;
+      background: transparent !important;
+      border: 2px solid #DBA32A !important; 
+      &:hover{
+        color: Variables.$white !important; 
+        background: #DBA32A !important;
+      }
+    }
+  }
+
+
+  //************************************ Custom CheckBox   *****************************
+
+.custom-checkbox-wrapper{
+  .checkbox-label {
+      display: block;
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 0;
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 400;
+      color: Variables.$border-color;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    /* Hide the browser's default checkbox */
+    .checkbox-label input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    
+    /* Create a custom checkbox */
+    .checkmark {
+      position: absolute;
+      top: 1px;
+      left: 0;
+      height: 18px;
+      width: 18px;
+      border: 2px solid Variables.$border-color;
+      background: transparent;
+      border-radius: 6px;
+    }
+    
+    /* When the checkbox is checked, add a blue background */
+    .checkbox-label input:checked ~ .checkmark {
+      background-color: Variables.$primary;
+      border: 2px solid Variables.$primary;
+    }
+    
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    
+    /* Show the checkmark when checked */
+    .checkbox-label input:checked ~ .checkmark:after {
+      display: block;
+    }
+    
+    /* Style the checkmark/indicator */
+    .checkbox-label .checkmark:after {
+      left: 5px;
+      top: 1px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    .range-wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      span{
+          color: Variables.$text_primary_1;
+          width: 100%;
+          margin-top: 25px;
+          padding: 0 10px;
+          text-align: center;
+      }
+          .range{
+              width: 47%;
+
+          label{
+              color: Variables.$text_primary_1;
+              display: block;
+          }
+          .input{
+              border: 1px solid #C3D4E9;
+              border-radius: 6px;
+              color: Variables.$heading_primary;
+              position: relative;
+              opacity: 1;
+              width: 100%;
+              height: auto;
+              color: #C3D4E9;
+              font-size: 12px;
+              line-height: 15px;
+              box-shadow: none;
+              padding: 6.5px 10px;
+              margin:  8px 0 0 0;
+              &:focus, &:focus-visible{
+                  border: 1px solid #C3D4E9;
+              }
+              &::placeholder{
+                  color: #C3D4E9;
+              }
+          }
+      }
+     }
+}
+
+
+//      ****************************  Global Element  ****************************
+
+
+.form {
+  &.transparent{
+    .form-control{
+      background: transparent;
+    }
+  }
+  .field-wrapper {
+    margin-bottom: 16px;
+    .form-group {
+      margin-bottom: 0;
+    }
+  }
+  .form-group {
+    position: relative;
+    margin-bottom: 16px;
+    &.with-right-icon{
+      .form-control{
+        padding-right: 42px;
+      }
+      img, svg{
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+      }
+    }
+    &.with-left-sign{
+      .sign-wrapper{
+        background: Variables.$light_purple_bg;
+        border-radius: 4px;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        position: absolute;
+        left: 2px;
+        top: 67%;
+        transform: translateY(-50%);
+        img, svg{
+          width: 19px;
+          height: 19px;
+          object-fit: contain;
+        }
+      }
+      input{
+        padding-left: 65px !important;
+      }
+    }
+    &.with-payment-cards{
+      ul.payment-cards-list{
+        position: absolute;
+        bottom: 15px;
+        right: 14px;
+        li{
+          &:not(&:last-of-type){
+            margin: 0 6px 0 0;
+          }
+          img{
+            height: 30px;
+            width: auto;
+            object-fit: contain;
+          }
+        }
+      }
+      input{
+        padding-right: 150px !important;
+      }
+    }
+    .react-select__menu{
+      z-index: 9999;
+      .react-select__menu-list{
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: Variables.$primary;
+        }
+      }
+    }
+    .react-select__control{
+      border: none !important;
+      outline: none !important;
+      border-color: transparent !important;
+      box-shadow: none;
+    }
+    .react-select__value-container{
+      border: none;
+      &:focus-visible{
+        border: none !important;
+        outline: none !important;
+      }
+      input{
+        &:focus-visible, &:focus{
+          border: none !important;
+          outline: none !important;
+        }
+      }
+    }
+    .react-select__indicators {
+      display: none;
+    }
+  }
+  .error-msg{
+    color: Variables.$text_primary_1;
+    display: block;
+    margin: 5px 0 0 0;
+    font-weight: 500;
+  }
+  label{
+    color:Variables.$heading_primary;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 4px;
+    &.large{
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &.check-report{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      input{
+        width: 18px;
+        height: 18px;
+      }
+    }
+    @media screen and (max-width: Variables.$screen-xs) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    sup{
+      color: Variables.$text_primary_1;
+      font-size: 12px;
+      top: 0;
+    }
+    &.medium{
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  .staric{
+    color: Variables.$red;
+  }
+  textarea{
+    resize: none;
+  }
+  .form-control:disabled{
+    border: 1px solid Variables.$border-color !important;
+    background-color: transparent !important;
+    background: transparent !important;
+    color: #A4ACBA !important;
+    &::placeholder{
+      color: #A4ACBA !important;
+    }
+  }
+  .form-dropdown{
+    .dropdown-toggle{
+      border: 1px solid Variables.$border-color;
+      color: Variables.$heading_primary;
+      background: transparent;
+      background-color: transparent;
+      border-radius: 8px;
+      line-height: 22px;
+      font-size: 14px;
+      font-weight: 400;
+      width: 100%;
+      //height: 64px;
+      padding: 13px 16px 13px;
+      display: block;
+      text-align: left;
+      position: relative;
+      &::after{
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    .dropdown-menu {
+      box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.1215686275);
+      border: 1px solid Variables.$border-color;
+      border-radius: 10px;
+      min-width: 225px;
+      padding: 8px;
+      margin-top: 5px;
+      .dropdown-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 8px;
+        color: #1A202C;
+        img, svg{
+          width: 20px;
+          height: 20px;
+          object-fit: contain;
+        }
+    }
+    }
+  }
+  .upload-brand-logo-wrapper{
+    .label{
+        border: 1px dashed #A9AAAD;
+        text-align: center;
+        border-radius: 8px;
+        width: 100%;
+        padding: 0 10px 21px;
+        cursor: pointer;
+        input{
+            width: 0;
+            height: 0;
+        }
+        .img-wrapper{
+            img, svg{
+                width: 65px;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+        .text-wrapper{
+            font-size: 0;
+            p{
+                color: Variables.$heading_primary;
+                font-size: 10px;
+                line-height: 14px;
+                margin: 0 0 3px;
+                span{
+                    color: Variables.$primary;
+                    font-size: 9px;
+                    line-height: 14px;
+                }
+            }
+            span{
+                color: #969DB2;
+                font-size: 8px;
+                line-height: 10px;
+            }
+        }
+    }
+}
+  .form-control {
+    border-radius: 8px;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    //height: 64px;
+    padding: 13px 16px 13px;
+    border: 1px solid Variables.$border-color;
+    color: Variables.$heading_primary;
+    position: relative;
+    outline: none;  
+    appearance: none;
+    background-color: Variables.$white;
+    @media screen and (max-width: Variables.$screen-xs) {
+      line-height: 16px;
+      font-size: 12px;
+      padding: 12px 16px;
+    }
+    &::placeholder {
+      color: Variables.$text_primary_2;
+      line-height: 22px;
+      font-size: 14px;
+      font-weight: 400;
+      @media screen and (max-width: Variables.$screen-xs) {
+        line-height: 16px;
+        font-size: 12px;
+      }
+    }
+    &:focus{
+      box-shadow: none;
+    }
+    &.blue-focus{
+      &:focus{
+      border: 1px solid Variables.$primary !important;
+      }
+    }
+    &:disabled{
+      border: 1px solid Variables.$border-color !important;
+    }
+  }
+  .error-msg{
+    color: Variables.$red;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    padding-left: 2px;
+    @media screen and (max-width: Variables.$screen-xs) {
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+  input:-webkit-autofill {
+    background-color: transparent; /* Change this color as desired */
+    -webkit-box-shadow: transparent; /* Ensures the color fills the entire field */
+    transition: background-color 5000s ease-in-out 0s; /* Prevents sudden color change on blur */
+  }
+  
+  input:-webkit-autofill:focus {
+    background-color: transparent; 
+  }
+  
+  input:-internal-autofill-selected {
+    background-color: transparent; 
+  }
+
+  input[type="checkbox"] {
+    border: 1px solid Variables.$text_primary_1;
+    border-radius: 4px;
+  }
+  .form-footer{
+    margin: 40px 0 0 0;
+    text-align: center;
+    p{
+    margin: 24px 0 0 0;
+    }
+}
+}
